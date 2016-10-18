@@ -21,7 +21,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WUh-qz-hhv" detailTextLabel="vwK-Ad-X15" style="IBUITableViewCellStyleSubtitle" id="mJ1-fL-FmN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="WUh-qz-hhv" detailTextLabel="vwK-Ad-X15" style="IBUITableViewCellStyleSubtitle" id="mJ1-fL-FmN">
                                 <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mJ1-fL-FmN" id="6EX-Cz-RzG">
@@ -61,6 +61,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBarOutlet" destination="LOQ-bA-n6M" id="bxU-fl-ozl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHz-Hm-lIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,8 +96,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="7dO-2c-Pix">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G5M-nd-zHD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G5M-nd-zHD">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="V65-dU-w6Z" id="K15-Pk-FMB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="entryTextView" destination="75R-t4-knc" id="fvh-De-sMh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7c-F8-X7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
